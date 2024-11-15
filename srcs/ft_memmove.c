@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	//unsigned char	dest[5];
@@ -41,4 +41,4 @@ int	main(void)
 	ft_memmove(src + 3, src, 5);
 	printf("after: %s\n", src);
 	return (0);
-}
+}*/

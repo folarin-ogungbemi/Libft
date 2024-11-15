@@ -11,7 +11,7 @@ int	ft_isalnum(char c)
 		return (1);
 	return (0);
 }	
-
+/*
 int	main(void)
 {
 	// Library function test
@@ -25,4 +25,4 @@ int	main(void)
 	else
 		write(2, "False!\n", 7);
 	return (0);
-}
+}*/

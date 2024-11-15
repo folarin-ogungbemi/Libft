@@ -14,6 +14,7 @@ int	ft_isalpha(char c)
 }
 
 /* Define a test case for for ft_isalpha */
+/*
 START_TEST(test_ft_isalpha)
 {
 	int	c;
@@ -26,8 +27,9 @@ START_TEST(test_ft_isalpha)
 	}
 }
 END_TEST
-
+*/
 /* Define a test suite for ft_isalpha */
+/*
 Suite *ft_isalpha_suite(void)
 {
 	Suite *s = suite_create("ft_isalpha Suite");
@@ -51,4 +53,4 @@ int	main(void)
 	srunner_free(sr);
 
 	return (number_failed == 0) ? 0 : 1;
-}
+}*/

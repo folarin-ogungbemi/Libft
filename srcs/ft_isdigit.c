@@ -9,7 +9,7 @@ int	ft_isdigit(char c)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	// Library Test
@@ -23,4 +23,4 @@ int	main(void)
 	else
 		write(1, "Custom: False\n", 14);
 	return (0);
-}
+}*/
