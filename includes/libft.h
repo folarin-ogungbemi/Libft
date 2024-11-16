@@ -1,9 +1,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <stddef.h>
-# include <ctype.h>
+# include <stdio.h> // printf
+# include <stddef.h> // func lib
+# include <ctype.h> // func lib
+# include <check.h> // Test lib
 
 # define TEXT 				"\033[0;90m" // grey
 # define WARNING			"\033[0;33m" // yellow
@@ -17,4 +18,7 @@ int	ft_isalnum(char c);
 int	ft_isdigit(char c);
 size_t	ft_strlen(const char *s);
 void    *ft_memmove(void *dest, const void *src, size_t n);
+
+/* Test files */
+int run_test_ft_isalpha(void);
 #endif
