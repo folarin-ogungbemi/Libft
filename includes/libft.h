@@ -8,5 +8,6 @@
 int	ft_isalpha(char c);
 int	ft_isalnum(char c);
 int	ft_isdigit(char c);
+size_t	ft_strlen(const char *s);
 void    *ft_memmove(void *dest, const void *src, size_t n);
 #endif
