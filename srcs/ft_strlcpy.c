@@ -25,8 +25,8 @@ int	main(void)
 	char	buffer[5];
 	const char *src = "Hello, World!";
 
-	printf("result: %ld\n", ft_strlcpy(buffer, src, sizeof(buffer)));
-	printf("buffer: %s\n", buffer);
+	printf(GREEN "result: %ld\n", ft_strlcpy(buffer, src, sizeof(buffer)));
+	printf(YELLOW "buffer: %s\n", buffer);
 	return (0);
 }
 */
