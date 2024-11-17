@@ -17,17 +17,28 @@ END_TEST
 /* Define a test suite for ft_isalpha */
 Suite *ft_isalpha_suite(void)
 {
-        Suite *s = suite_create("ft_isalpha Suite");
-        TCase *tc_core = tcase_create("Core");
+        Suite	*s;
+	TCase	*ft_isalpha;
 
-        tcase_add_test(tc_core, test_ft_isalpha);
-        suite_add_tcase(s, tc_core);
+	s = suite_create("ft_isalpha Suite");
+	ft_isalpha = tcase_create("ft_isalpha");
+	tcase_add_test(ft_isalpha, test_ft_isalpha);
+	suite_add_tcase(s, ft_isalpha);
 
-        return s;
+        return (s);
 }
 
 int     run_test_ft_isalpha(void)
-{                                                                                                             int     number_failed;                                                                                                                                                                                      Suite *s = ft_isalpha_suite();
-        SRunner *sr = srunner_create(s);                                                                                                                                                                            srunner_run_all(sr, CK_NORMAL);                                                                       number_failed = srunner_ntests_failed(sr);
-        srunner_free(sr);                                                                                                                                                                                           return (number_failed == 0) ? 0 : 1;
+{
+	int	number_failed;
+	Suite	*s;
+	SRunner	*sr;
+
+	s = ft_isalpha_suite();
+	sr = srunner_create(s);
+	srunner_run_all(sr, CK_NORMAL);
+	number_failed = srunner_ntests_failed(sr);
+	srunner_free(sr);
+
+	return (number_failed);
 }
