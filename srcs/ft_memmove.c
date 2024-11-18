@@ -1,6 +1,8 @@
-#include <string.h>
-#include <stdio.h>
 
+#include <stddef.h>
+
+/* The  memmove() function copies n bytes 
+ * from memory area src to memory area dest. */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
@@ -10,6 +12,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = dest;
 	s = src;
 	i = 0;
+	if (!dest || !src)
+		return (NULL);
 	if (d < s)
 	{
 		while (i < n)
@@ -29,16 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	//unsigned char	dest[5];
-	char	src[] = "ABCDEFGHI";
-
-	printf("before: %s\n", src);
-
-	//memmove(src + 3, src, 5);
-	ft_memmove(src + 3, src, 5);
-	printf("after: %s\n", src);
-	return (0);
-}*/

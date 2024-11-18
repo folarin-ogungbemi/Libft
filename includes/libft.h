@@ -23,4 +23,5 @@ void    *ft_memmove(void *dest, const void *src, size_t n);
 int run_test_ft_isalpha(void);
 int run_test_ft_isalnum(void);
 int run_test_ft_isdigit(void);
+int run_test_ft_memmove(void);
 #endif

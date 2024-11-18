@@ -23,19 +23,20 @@ Suite *ft_isalnum_suite(void)
         tcase_add_test(ft_isalnum, test_ft_isalnum);
         suite_add_tcase(s, ft_isalnum);
 
-        return s;
+        return (s);
 }
 
 int     run_test_ft_isalnum(void)
-{                                                                                                             int     number_failed;
-	Suite	*s; 
+{
+	int     nf;
+	Suite	*s;
 	SRunner	*sr;
 
 	s = ft_isalnum_suite();
 	sr = srunner_create(s);
 	srunner_run_all(sr, CK_NORMAL);
-	number_failed = srunner_ntests_failed(sr);
+	nf = srunner_ntests_failed(sr);
 	srunner_free(sr);
 
-	return (number_failed == 0) ? 0 : 1;
+	return (nf);
 }
