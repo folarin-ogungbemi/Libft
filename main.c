@@ -14,6 +14,20 @@ void	test_product_ft_memmove(void)
 	printf("ft_memmove should not crash: %s\n",(char *)ft_memmove(NULL, b, 5));
 }
 
+
+void	test_product_ft_strlen(void)
+{
+	char	src[13] = "Hello World!";
+	char	s[5] = "Hello";
+	char	dst[5] = "World";
+	char	x[1] = "";
+
+	printf("ft_strlen 12: %ld\n", ft_strlen(src));
+	printf("ft_strlen undefined: %ld\n", ft_strlen(dst));
+	printf("ft_strlen undefined: %ld\n", ft_strlen(s));
+	printf("ft_strlen 0: %ld\n", ft_strlen(x));
+}
+
 int     main(void)
 {
 	printf("Running production...\n\n");
@@ -37,5 +51,8 @@ int     main(void)
 	/* FT_MEMMOVE */
 	printf("--------------------\n");
 	test_product_ft_memmove();
+	/* FT_STRLEN */
+	printf("--------------------\n");
+	test_product_ft_strlen();
 	return (0);
 } 

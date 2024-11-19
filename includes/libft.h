@@ -24,4 +24,5 @@ int run_test_ft_isalpha(void);
 int run_test_ft_isalnum(void);
 int run_test_ft_isdigit(void);
 int run_test_ft_memmove(void);
+int run_test_ft_strlen(void);
 #endif
