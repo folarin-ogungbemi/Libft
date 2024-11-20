@@ -28,6 +28,11 @@ int     main(void)
                 printf(SUCCESS "All test passed\n" RESET);
 	else 
 		printf(FAIL "Fail\n" RESET);
+
+        if (run_test_ft_strlcpy() == 0)
+                printf(SUCCESS "All test passed\n" RESET);
+	else 
+		printf(FAIL "Fail\n" RESET);
         #endif
         return (0);
 }

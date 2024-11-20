@@ -14,6 +14,14 @@ void	test_product_ft_memmove(void)
 	printf("ft_memmove should not crash: %s\n",(char *)ft_memmove(NULL, b, 5));
 }
 
+void	test_product_ft_strlcpy(void)
+{
+        char    buffer[5];
+        const char *src = "Hello, World!";
+
+        printf("result: %ld\n", ft_strlcpy(buffer, src, sizeof(buffer)));
+        printf("buffer: %s\n", buffer);
+}
 
 void	test_product_ft_strlen(void)
 {
@@ -54,5 +62,8 @@ int     main(void)
 	/* FT_STRLEN */
 	printf("--------------------\n");
 	test_product_ft_strlen();
+	/* FT_STRLCPY */
+        printf("--------------------\n");
+        test_product_ft_strlcpy();
 	return (0);
 } 

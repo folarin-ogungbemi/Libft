@@ -1,8 +1,7 @@
-#include <check.h>
-#include <stdio.h>
-#include <string.h>
 #include "../includes/libft.h"
 
+/* Function copies up to size - 1 characters 
+ * from the NUL-terminated string src to dst, NUL-terminating the result.*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -19,14 +18,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-/*
-int	main(void)
-{
-	char	buffer[5];
-	const char *src = "Hello, World!";
-
-	printf(GREEN "result: %ld\n", ft_strlcpy(buffer, src, sizeof(buffer)));
-	printf(YELLOW "buffer: %s\n", buffer);
-	return (0);
-}
-*/

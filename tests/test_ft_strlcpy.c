@@ -1,38 +1,32 @@
 #include "../includes/libft.h"
 
-START_TEST(test_ft_strlen)
+START_TEST(test_ft_strlcpy)
 {
-	char	str[10] = "testing!";
-	char	s[0];
-	char	x[2];
 
-	ck_assert_int_eq(ft_strlen(str), strlen(str));
-	ck_assert_int_eq(ft_strlen(s), strlen(s));
-	ck_assert_int_eq(ft_strlen(x), strlen(x));
 }
 END_TEST
 
-Suite	*ft_strlen_suite(void)
+Suite	*ft_strlcpy_suite(void)
 {
 	Suite	*s;
-	TCase	*ft_strlen;
+	TCase	*ft_strlcpy;
 
-	s = suite_create("ft_strlen Suite");
-	ft_strlen = tcase_create("ft_strlen");
+	s = suite_create("ft_strlcpy Suite");
+	ft_strlcpy = tcase_create("ft_strlcpy");
 
-	tcase_add_test(ft_strlen, test_ft_strlen);
-	suite_add_tcase(s, ft_strlen);
+	tcase_add_test(ft_strlcpy, test_ft_strlcpy);
+	suite_add_tcase(s, ft_strlcpy);
 
 	return (s);
 }
 
-int	run_test_ft_strlen(void)
+int	run_test_ft_strlcpy(void)
 {
 	int	nf;
 	Suite	*s;
 	SRunner	*sr;
 
-	s = ft_strlen_suite();
+	s = ft_strlcpy_suite();
 	sr = srunner_create(s);
 	srunner_run_all(sr, CK_NORMAL);
 	nf = srunner_ntests_failed(sr);
@@ -40,4 +34,3 @@ int	run_test_ft_strlen(void)
 
 	return (nf);
 }
-

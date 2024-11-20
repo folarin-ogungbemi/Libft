@@ -17,6 +17,7 @@ int	ft_isalpha(char c);
 int	ft_isalnum(char c);
 int	ft_isdigit(char c);
 size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void    *ft_memmove(void *dest, const void *src, size_t n);
 
 /* Test files */
@@ -25,4 +26,5 @@ int run_test_ft_isalnum(void);
 int run_test_ft_isdigit(void);
 int run_test_ft_memmove(void);
 int run_test_ft_strlen(void);
+int run_test_ft_strlcpy(void);
 #endif
