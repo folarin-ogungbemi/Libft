@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 /* Allocates (with malloc(3)) and returns a new string,
@@ -34,6 +32,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (m);
 }
 /*
+#include <stdlib.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	char	s1[10] = "Hello, ";

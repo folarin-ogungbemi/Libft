@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
+/* The  strdup()  function returns a pointer to a new string which 
+ * is a duplicate of the string s.*/
 char	*ft_strdup(const char *s)
 {
 	size_t		s_len;
 	size_t		i;
-	char	*d;
+	char		*d;
 
 	i = 0;
 	s_len = ft_strlen(s) + 1;
@@ -33,6 +32,9 @@ char	*ft_strdup(const char *s)
 	return (d);
 }
 /*
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	char	src[9] = "folarin!";

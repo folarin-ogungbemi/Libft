@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
 #include "libft.h"
 
 /* Allocates (with malloc(3)) and returns a substring from the string ’s’.
@@ -32,17 +29,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
+	m[i] = '\0';
 	return (m);
 }
 /*
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	char	str[10] = "testing!!";
 	int	start = 5;
 	char	*result;
 
-	result = ft_substr(str, start, 4);
+	result = ft_substr(str, start, sizeof(str));
 	printf("result: %s\n", result);
 	free(result);
 	return (0);
-}*/
+}
+*/

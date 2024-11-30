@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
 /* The function calculates the length of the string 
  * pointed to by s, excluding the terminating null byte ('\0') */
 size_t	ft_strlen(const char *str)
@@ -25,6 +22,9 @@ size_t	ft_strlen(const char *str)
 	return (end - str);
 }
 /*
+#include <stddef.h>
+#include <string.h>
+#include <stdio.h>
 int	main(void)
 {
 	char	c[10] = "memory!";

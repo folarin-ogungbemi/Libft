@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 /* Allocates (with malloc(3)) and returns a copy of ’s1’ with
@@ -47,6 +44,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (m);
 }
 /*
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+
 int	main(void)
 {
 	char	*s1 = "!,!hello world:;!!";

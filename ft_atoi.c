@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 /* Function converts the initial portion of
@@ -39,6 +37,8 @@ int	ft_atoi(const char *nptr)
 	return (sign * num);
 }
 /*
+#include <stdio.h>
+#include <stdlib.h>
 int	main(void)
 {
 	char	str[10] = "  -12";

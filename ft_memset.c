@@ -10,25 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
 /* The memset() function fills the first n bytes
  * of the memory area pointed to by s with the constant byte c.*/
-void	*ft_memset(void *ptr, int value, size_t num)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
 	unsigned int	i;
 
-	p = ptr;
+	p = s;
 	i = 0;
-	while (i < num)
+	while (i < n)
 	{
-		p[i] = value;
+		p[i] = c;
 		i++;
 	}
-	return (ptr);
+	return (s);
 }
 /*
+#include <stddef.h>
+#include <stdio.h>
 int	main(void)
 {
 	char	arr[5] = "test";

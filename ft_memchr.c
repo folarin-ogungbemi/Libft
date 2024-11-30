@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 /* The functions return a pointer 
  * to the matching  byte  or  NULL  if  the character 
@@ -33,6 +32,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int     test_ft_memchr(const char *str)
 {
         char    test[13] = "atestzingb!!";

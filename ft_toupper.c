@@ -10,20 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+#include <ctype.h>
 
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		return(c - 32);
+		return (c - 32);
 	return (c);
 }
 /*
-int	main(void)
+int     test_ft_toupper(char c)
 {
-	char	c;
+        if (toupper(c) > 0 && ft_toupper(c) > 0)
+                return (1);
+        else if ((toupper(c) > 0 && ft_toupper(c) <= 0)
+                || (toupper(c) <= 0 && ft_toupper(c) > 0))
+                return (-1);
+        return (0);
+}
 
-	c = 'a';
-	printf("return: %c\n", ft_toupper(c));
-	return (0);
+int     main(void)
+{
+        unsigned char   c;
+
+        c = 0;
+        while (c <= 127)
+        {
+                if (test_ft_toupper(c) == -1)
+                {
+                        write(1, "One function disagree on char: ", 31);
+                        write(1, &c, 1);
+                        write(1, "\n", 1);
+                        return (1);
+                }
+                c++;
+        }
+        write(1, "Both functions agree", 20);
+        write(1, "\n", 1);
+        return (0);
 }*/

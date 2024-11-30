@@ -11,13 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /* Function allocates memory for an array of nmemb elements of size bytes each
  * and returns a pointer to the allocated memory. The memory is set to zero.
- * If nmemb or size is 0, then calloc() returns either NULL,
- * or a unique pointer value  that  can  later be successfully passed to free().*/
+ * If nmemb or size is 0, then calloc() returns either NULL, or a unique pointer
+ * value  that  can  later be successfully passed to free().*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mem;
@@ -27,7 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	if (nmemb != 0 && (total_size / nmemb != size))
-	       return (NULL);	
+		return (NULL);
 	mem = malloc(total_size);
 	if (!mem)
 		return (NULL);
@@ -35,6 +33,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (mem);
 }
 /*
+#include <stdio.h>
+#include <stdlib.h>
 int	main(void)
 {
 	int	*arr;

@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
+#include "libft.h"
+/* The strnstr() function locates the first occurrence of the null-terminated 
+ * string little in the string big, where not more than len characters 
+ * are searched.*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -36,6 +37,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int	main(void)
 {
 	const char *largestring = "Foo Bar Baz";

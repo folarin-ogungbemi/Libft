@@ -15,7 +15,6 @@
 
 /*The strlcpy() function copies up to size - 1 characters
  * from the NUL-terminated string src to dst, NUL-terminating the result. */
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

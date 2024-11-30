@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 /* The function compares only the first (at most) n bytes of s1 and s2.*/
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -31,6 +29,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int	test_ft_strncmp(const char *s1, const char *s2)
 {
 	if (ft_strncmp(s1, s2, 3) != strncmp(s1, s2, 3))

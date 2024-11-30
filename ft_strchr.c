@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 /* The  strchr() function returns a pointer to the first occurrence of the
        character c in the string s.*/
-
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s || !c)
+		return (NULL);
 	while (*s)
 	{
 		if (*s == (char)c)
@@ -29,6 +29,8 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	test_ft_strchr(const char *str)
 {
 	char	test[13] = "atestzingb!!";

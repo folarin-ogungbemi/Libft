@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 size_t	ft_count(int nb)
 {
 	size_t	count;
@@ -28,46 +27,53 @@ size_t	ft_count(int nb)
 	}
 	return (count);
 }
-		
+
+/* Function returns a string representing the integer received as an argument.
+ * Negative numbers must be handled. */
 char	*ft_itoa(int n)
 {
 	char	*m;
 	size_t	len;
 	size_t	i;
-	size_t	temp;
 
-	temp = n;
 	len = ft_count(n);
 	i = len - 1;
 	m = (char *)malloc(len + 1);
 	if (!m)
 		return (NULL);
 	m[len] = '\0';
+	if (n == 0)
+		m[0] = 48;
 	if (n < 0)
 	{
 		m[0] = '-';
-		temp = n * -1;
+		n *= -1;
 	}
-	while (temp > 0)
+	while (n > 0)
 	{
-		m[i] = (temp % 10) + 48;
-		temp /= 10;
+		m[i] = (n % 10) + 48;
+		n /= 10;
 		i--;
 	}
-	if (n == 0)
-		m[0] = 48;
 	return (m);
 }
 /*
 int	main(void)
 {
-	int	x;
+	int	x[] = {-0, 0, 12345, -12345, 789};
 	char	*result;
+	int	i;
+	int	size = sizeof(x) / sizeof(x[0]);
 
-	x = 2345;
-	result = ft_itoa(x);
-	printf("result %s\n", result);
-	free(result);
+	i = 0;
+	while (i < size)
+	{
+		result = ft_itoa(x[i]);
+		if (result == NULL) 
+			return (1);
+		printf("result[%d] : %s\n", i, result);
+		free(result);
+		i++;
+	}
 	return (0);
-}
-*/
+}*/

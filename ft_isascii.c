@@ -13,9 +13,9 @@
 /* checks whether c is a 7-bit unsigned char value
  * that fits into the ASCII character set. 
  *  8-bit is considered chars btw 128-255.*/
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
-	if (c <= 127)
+	if ((unsigned char)c <= 127)
 		return (1);
 	return (0);
 }

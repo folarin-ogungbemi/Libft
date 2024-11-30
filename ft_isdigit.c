@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+#include <ctype.h>
+
 /* Function checks for a digit (0 through 9) */
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }
 
-/*
 int	test_ft_isdigit(char c)
 {
 	if (isdigit(c) > 0 && ft_isdigit(c) > 0)
@@ -48,4 +50,4 @@ int	main(void)
 	write(1, "Both functions agree", 20);
 	write(1, "\n", 1);
 	return (0);
-}*/
+}

@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
-
+/* The  memmove()  function  copies  n bytes from memory area 
+ * src to memory area dest.*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	size_t			i;
+	size_t				i;
 
 	i = 0;
 	d = dest;

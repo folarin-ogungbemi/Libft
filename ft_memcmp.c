@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -34,6 +33,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int     test_ft_memcmp(const char *s1, const char *s2)
 {
         if (ft_memcmp(s1, s2, 3) != memcmp(s1, s2, 3))
