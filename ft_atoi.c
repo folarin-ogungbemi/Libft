@@ -12,8 +12,15 @@
 
 #include "libft.h"
 
-/* Function converts the initial portion of
- * the string pointed to by nptr to int. */
+static int	ft_isspace(unsigned char c)
+{
+	if ((c >= 9 && c <= 13) || (c == 32))
+		return (1);
+	return (0);
+}
+
+/* Function converts the initial portion of the
+ * string pointed to by mptr to int. */
 int	ft_atoi(const char *nptr)
 {
 	int	num;
@@ -39,11 +46,34 @@ int	ft_atoi(const char *nptr)
 /*
 #include <stdio.h>
 #include <stdlib.h>
-int	main(void)
+static int     test_ft_atoi(char *s)
 {
-	char	str[10] = "  -12";
+	if (!s)
+		return (-1);
+        if (atoi(s) == ft_atoi(s))
+		return (1);
+	return (-1);
+}
 
-	printf("custom: %d\n", ft_atoi(str));
-	printf("library: %d\n", atoi(str));
-	return (0);
-}*/
+int     main(void)
+{
+        char   *str[] = {"  -12", "-0", "invalid", "0123456789", "+1", NULL};
+	size_t	i;
+
+	i = 0;
+        while (str[i])
+        {
+                if (test_ft_atoi(str[i]) == -1)
+                {
+                        write(1, "One function disagree: ", 25);
+                        write(1, str[i], ft_strlen(str[i]));
+                        write(1, "\n", 1);
+                        return (1);
+                }
+                i++;
+        }
+        write(1, "Both functions agree", 20);
+        write(1, "\n", 1);
+        return (0);
+}
+*/

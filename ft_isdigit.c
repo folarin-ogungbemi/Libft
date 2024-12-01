@@ -20,7 +20,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
+/*
 int	test_ft_isdigit(char c)
 {
 	if (isdigit(c) > 0 && ft_isdigit(c) > 0)
@@ -50,4 +50,4 @@ int	main(void)
 	write(1, "Both functions agree", 20);
 	write(1, "\n", 1);
 	return (0);
-}
+}*/
