@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:52:30 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/26 19:13:05 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:07:59 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s2));
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	total_len = len_s1 + len_s2 + 1;
-	m = (char *)malloc(total_len);
+	m = malloc(sizeof(char) * (total_len));
 	if (!m)
 		return (NULL);
-	ft_strlcpy(m, s1, len_s1);
+	ft_strlcpy(m, s1, len_s1 + 1);
 	ft_strlcat(m, s2, total_len);
 	return (m);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char	s1[10] = "Hello, ";
-	char	s2[10] = "World!";
-	char	*result;
-
-	result = ft_strjoin(s1, s2);
-	printf("result: %s\n", result);
-	free(result);
-	return (0);
-}*/

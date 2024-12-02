@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:08:50 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/21 15:47:27 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 10:52:35 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ size_t	ft_strlen(const char *str)
 		end++;
 	return (end - str);
 }
-/*
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	c[10] = "memory!";
-	int	custom;
-	int	lib;
-
-	custom = ft_strlen(c);
-	printf("Custom: %d\n", custom);
-	lib = strlen(c);
-	printf("Library: %d\n", lib);
-	return (0);
-}*/

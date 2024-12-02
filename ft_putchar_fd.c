@@ -1,5 +1,15 @@
-#include <unistd.h>
-#include <fcntl.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 08:55:58 by foogungb          #+#    #+#             */
+/*   Updated: 2024/12/02 13:35:10 by foogungb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
@@ -7,14 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 	if (fd >= 0)
 		write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	int	fd;
-
-	fd = open ("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd < 0)
-		return (1);
-	ft_putchar_fd('C', fd);
-	return (0);
-}*/

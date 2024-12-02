@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 08:56:10 by foogungb          #+#    #+#             */
+/*   Updated: 2024/12/02 13:39:44 by foogungb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
@@ -11,16 +23,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-/*
-int	main(void)
-{
-	int	fd;
-	char	s[10] = "folarin!";
-
-	fd = open("example.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd < 0)
-		return (1);
-	ft_putendl_fd(s, fd);
-	return (0);
-}
-*/

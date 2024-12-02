@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:37:14 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/14 17:34:10 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 09:20:38 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,34 +20,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int	test_ft_isalnum(char c)
-{
-	if (isalnum(c) > 0 && ft_isalnum(c) > 0)
-		return (1);
-	else if ((isalnum(c) > 0 && ft_isalnum(c) <= 0)
-		|| (isalnum(c) <= 0 && ft_isalnum(c) > 0))
-		return (-1);
-	return (0);
-}
-
-int	main(void)
-{
-	unsigned char	c;
-
-	c = 0;
-	while (c <= 127)
-	{
-		if (test_ft_isalnum(c) == -1)
-		{
-			write(1, "One function disagree on char: ", 31);
-			write(1, &c, 1);
-			write(1, "\n", 1);
-			return (1);
-		}
-		c++;
-	}
-	write(1, "Both functions agree", 20);
-	write(1, "\n", 1);
-	return (0);
-}*/

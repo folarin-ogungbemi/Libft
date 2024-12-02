@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 08:56:41 by foogungb          #+#    #+#             */
+/*   Updated: 2024/12/02 12:54:15 by foogungb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 /* Applies the function f to each character of the string s,
  * passing its index as the first argument and the character itself
  * as the second.A new string is created (using malloc(3)) to collect 
@@ -22,24 +35,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	m[i] = '\0';
 	return (m);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-char	c(unsigned int i, char c)
-{
-	return (c);
-}
-
-int	main(void)
-{
-	char	s[10] = "testing!";
-	char	*result;
-
-	result = ft_strmapi(s, c);
-	if (!result)
-		return (-1);
-	printf("result: %s\n", result);
-	free(result);
-	return (0);
-}
-*/

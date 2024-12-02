@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 08:55:42 by foogungb          #+#    #+#             */
+/*   Updated: 2024/12/02 12:58:56 by foogungb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /* Applies the function ’f’ on each character of the string
@@ -16,21 +28,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-void	to_uppercase(unsigned int index, char *ch)
-{
-	if (ch && *ch)
-		*ch = toupper(*ch);
-}
-
-int	main(void)
-{
-	char	str[10] = "tester!!";
-
-	ft_striteri(str, to_uppercase);
-	printf("result: %s\n", str);
-	return (0);
-}*/

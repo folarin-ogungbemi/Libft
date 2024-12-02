@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:00:23 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/14 18:11:23 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 11:24:04 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char	dest[10] = "test";
-	char	src[20] = "Hello World!!";
-
-	printf("dest before: %s\n", dest);
-	ft_memcpy(dest, src, sizeof(dest));
-	printf("dest after: %s\n", dest);
-	return (0);
-}
-*/

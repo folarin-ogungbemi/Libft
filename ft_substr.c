@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:38:33 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/26 15:47:57 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 12:38:02 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	m[i] = '\0';
 	return (m);
 }
-/*
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
-
-int	main(void)
-{
-    char *result;
-
-    result = ft_substr("Hello, World!", 7, 5);
-    printf("Result 1: %s\n", result); // Expected: "World"
-    free(result);
-
-    result = ft_substr("Hello, World!", 0, 5);
-    printf("Result 2: %s\n", result); // Expected: "Hello"
-    free(result);
-
-    result = ft_substr("Hello, World!", 15, 5);
-    printf("Result 3: %s\n", result); // Expected: ""
-    free(result);
-
-    result = ft_substr(NULL, 0, 5);
-    printf("Result 4: %s\n", result); // Expected: "(null)"
-    free(result);
-
-    return 0;
-}*/

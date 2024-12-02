@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:05:01 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/25 17:05:57 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 12:30:58 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(mem, total_size);
 	return (mem);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	int	*arr;
-	int	i;
-
-	i = 0;
-	arr = (int *)ft_calloc(5, sizeof(arr));
-	if (!arr)
-		return (1);
-	while (i < 5)
-	{
-		printf("%d: %d\n", i, arr[i]);
-       		i++;
-	}
-	free(arr);
-	return (0);
-}*/

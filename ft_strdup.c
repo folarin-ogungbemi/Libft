@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:28:44 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/25 17:36:30 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 12:32:55 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strdup(const char *s)
 	d[i] = '\0';
 	return (d);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	src[9] = "folarin!";
-	char	*dest;
-
-	dest = ft_strdup(src);
-	printf("custom: %s\n", dest);
-	printf("library: %s\n", strdup("folarin!"));
-	free(dest);
-	return (0);
-}*/
