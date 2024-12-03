@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:26:49 by foogungb          #+#    #+#             */
-/*   Updated: 2024/12/02 15:19:09 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:39:32 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -651,7 +651,8 @@ int     test_ft_strrchr(const char *str)
                         return (0);
                 }
                 printf("------------------------------\n");
-                printf("result: %s\n", ft_strrchr(str, *ptr));
+                printf("cust: %s\n", ft_strrchr(str, *ptr));
+                printf("libr: %s\n", strrchr(str, *ptr));
                 ptr++;
         }
         return (1);
@@ -665,12 +666,11 @@ int     main(void)
                 printf("\nResults are Equal\n\n");
         else
                 printf("\nresults are not equal\n\n");
-        printf("custom: %s\n", ft_strrchr(str, '\0'));
-        printf("library: %s\n", strrchr(str, '\0'));
+        printf("custom test (null): %s\n", ft_strrchr(str, '\0'));
+        printf("librar test (null): %s\n", strrchr(str, '\0'));
         return (0);
 }
 */
-
 /*
 // FT_STRNCMP
 #include <string.h>
@@ -926,7 +926,7 @@ int     main(void)
 
 int     main(void)
 {
-        char    *s1 = "!,!hello world:;!!";
+        char    s1[] = "!;hello, world's programmer,:!";
         char    *set = "!;,:";  // Characters to remove from the start and end
         char    *trimmed = ft_strtrim(s1, set);
 
@@ -939,6 +939,7 @@ int     main(void)
                 printf("Memory allocation failed or invalid input\n");
         return 0;
 }
+
 
 /*
 #include <stdio.h>

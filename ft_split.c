@@ -1,6 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 08:55:19 by foogungb          #+#    #+#             */
+/*   Updated: 2024/12/02 12:48:28 by foogungb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	count_substr(char const *str, char c)
@@ -23,27 +32,8 @@ static size_t	count_substr(char const *str, char c)
 	}
 	return (count);
 }
-/*
-static char	*ft_word(const char *s, unsigned int start, size_t len)
-{
-	char *substr;
-	size_t i;
 
-	substr = (char *)malloc((len + 1) * sizeof(char));
-	if (!substr)
-		return NULL;
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return substr;
-}
-*/
-
-void	ft_free(char **m, size_t i)
+static void	ft_free(char **m, size_t i)
 {
 	while (i > 0)
 		free(m[--i]);
@@ -87,24 +77,3 @@ char	**ft_split(char const *s, char c)
 	m[i] = NULL;
 	return (m);
 }
-/*
-int	main(void)
-{
-	char **result;
-	int i = 0;
-
-	result = ft_split("Hello,,flo,this,is,C,World,!", ',');
-	if (result)
-	{
-		while (result[i])
-		{
-			printf("result[%d]: %s\n", i, result[i]);
-			free(result[i]);
-			i++;
-		}
-		free(result);
-		result = NULL;
-	}
-	return (0);
-}
-*/

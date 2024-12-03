@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                        :+:      :+:    :+:     */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:08:50 by foogungb          #+#    #+#             */
-/*   Updated: 2024/11/21 15:47:27 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:45:18 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_count(int nb)
+static size_t	ft_count(int nb)
 {
 	size_t	count;
 
@@ -36,6 +35,8 @@ char	*ft_itoa(int n)
 	size_t	len;
 	size_t	i;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	len = ft_count(n);
 	i = len - 1;
 	m = (char *)malloc(len + 1);
@@ -57,23 +58,3 @@ char	*ft_itoa(int n)
 	}
 	return (m);
 }
-/*
-int	main(void)
-{
-	int	x[] = {-0, 0, 12345, -12345, 789};
-	char	*result;
-	int	i;
-	int	size = sizeof(x) / sizeof(x[0]);
-
-	i = 0;
-	while (i < size)
-	{
-		result = ft_itoa(x[i]);
-		if (result == NULL) 
-			return (1);
-		printf("result[%d] : %s\n", i, result);
-		free(result);
-		i++;
-	}
-	return (0);
-}*/

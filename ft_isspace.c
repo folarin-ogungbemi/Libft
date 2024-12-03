@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 17:28:44 by foogungb          #+#    #+#             */
-/*   Updated: 2024/12/02 15:49:17 by foogungb         ###   ########.fr       */
+/*   Created: 2024/11/25 16:56:31 by foogungb          #+#    #+#             */
+/*   Updated: 2024/11/26 15:11:07 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/* The  strdup()  function returns a pointer to a new string which 
- * is a duplicate of the string s.*/
-char	*ft_strdup(const char *s)
+/* Function returns if space, form-feed ('\f'), newline
+ * ('\n'), carriage return ('\r'), horizontal tab ('\t'),
+ *  and vertical tab ('\v').*/
+int	ft_isspace(unsigned char c)
 {
-	size_t		s_len;
-	size_t		i;
-	char		*d;
-
-	i = 0;
-	s_len = ft_strlen(s) + 1;
-	d = (char *)malloc(s_len);
-	if (!d)
-		return (NULL);
-	while (s[i])
-	{
-		d[i] = s[i];
-		i++;
-	}
-	d[i] = '\0';
-	return (d);
+	if ((c >= 9 && c <= 13) || (c == 32))
+		return (1);
+	return (0);
 }
