@@ -926,7 +926,7 @@ int     main(void)
 
 int     main(void)
 {
-        char    s1[] = "!;hello, world's programmer,:!";
+        char    s1[] = "hello, world";
         char    *set = "!;,:";  // Characters to remove from the start and end
         char    *trimmed = ft_strtrim(s1, set);
 
