@@ -27,6 +27,27 @@ static size_t	ft_count(int nb)
 	return (count);
 }
 
+static char	*ft_zero(int n, char *m)
+{
+	if (n == 0)
+	{
+		m[0] = 48;
+		m[1] = '\0';
+		return (m);
+	}
+	return (NULL);
+}
+
+static int	ft_negative(int n, char *m)
+{
+	if (n < 0)
+	{
+		m[0] = '-';
+		n = -n;
+	}
+	return (n);
+}
+
 /* Function returns a string representing the integer received as an argument.
  * Negative numbers must be handled. */
 char	*ft_itoa(int n)
@@ -43,13 +64,9 @@ char	*ft_itoa(int n)
 	if (!m)
 		return (NULL);
 	m[len] = '\0';
-	if (n == 0)
-		m[0] = 48;
-	if (n < 0)
-	{
-		m[0] = '-';
-		n *= -1;
-	}
+	if (ft_zero(n, m))
+		return (m);
+	n = ft_negative(n, m);
 	while (n > 0)
 	{
 		m[i] = (n % 10) + 48;

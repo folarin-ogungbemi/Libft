@@ -918,7 +918,7 @@ int     main(void)
         return (0);
 }*/
 
-
+/*
 // FT_STRTRIM
 #include <stdio.h>
 #include <stddef.h>
@@ -939,7 +939,7 @@ int     main(void)
                 printf("Memory allocation failed or invalid input\n");
         return 0;
 }
-
+*/
 
 /*
 #include <stdio.h>
@@ -979,9 +979,14 @@ int     main(void)
         i = 0;
         while (i < size)
         {
+
+                printf("result[%d] : %d\n", i, x[i]);
                 result = ft_itoa(x[i]);
                 if (result == NULL)
+		{
+			printf("Error for %d\n", x[i]);
                         return (1);
+		}
                 printf("result[%d] : %s\n", i, result);
                 free(result);
                 i++;
