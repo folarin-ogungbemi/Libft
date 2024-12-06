@@ -11,21 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /* Function allocates an empty memory if string is null */
 static char	*ft_empty_str(char const *s1, size_t len)
 {
-	char	*m;
-
 	if (s1 == NULL || s1[0] == '\0' || len == 0)
-	{
-		m = (char *)malloc(sizeof(char));
-		if (!m)
-			return (NULL);
-		m[0] = '\0';
-		return (m);
-	}
+		return (NULL);
 	return (NULL);
 }
 
