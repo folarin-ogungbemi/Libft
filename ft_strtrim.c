@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /* Function allocates an empty memory if string is null */
 static char	*ft_empty_str(char const *s1, size_t len)

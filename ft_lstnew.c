@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -31,6 +32,7 @@ int	main(void)
 
 	node = ft_lstnew("Good Morning!");
 	printf("result: %s\n", (char *)node->content);
+	free(node);
 	return (0);
 }
 */
