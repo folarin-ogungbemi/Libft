@@ -6,7 +6,7 @@
 /*   By: foogungb <foogungb@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:26:49 by foogungb          #+#    #+#             */
-/*   Updated: 2024/12/03 16:39:32 by foogungb         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:54:32 by foogungb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -917,7 +917,6 @@ int     main(void)
         free(result);
         return (0);
 }*/
-
 /*
 // FT_STRTRIM
 #include <stdio.h>
@@ -926,21 +925,20 @@ int     main(void)
 
 int     main(void)
 {
-        char    s1[] = "hello, world";
-        char    *set = "!;,:";  // Characters to remove from the start and end
+        char    s1[] = ",.:!<hello, world!>;:.";
+        char    *set = "!,:;.";
         char    *trimmed = ft_strtrim(s1, set);
 
         if (trimmed != NULL)
         {
                 printf("Trimmed string: '%s'\n", trimmed);
-                free(trimmed);  // Don't forget to free the memory!
+                free(trimmed);
         }
         else
                 printf("Memory allocation failed or invalid input\n");
         return 0;
 }
 */
-
 /*
 #include <stdio.h>
 #include <stdlib.h>
